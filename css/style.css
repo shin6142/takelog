@@ -44,7 +44,6 @@ li {
 
 #top .header_right .menu-btn {
   position: fixed;
-  top: 10px;
   right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,7 +57,6 @@ li {
       -ms-flex-align: center;
           align-items: center;
   z-index: 90;
-  background-color: #3584bb;
 }
 
 #top .header_right .menu-btn span,
@@ -69,7 +67,7 @@ li {
   height: 3px;
   width: 25px;
   border-radius: 3px;
-  background-color: #ffffff;
+  background-color: #000;
   position: absolute;
 }
 
