@@ -1,0 +1,23 @@
+.header {
+  // display: flex;
+  border-bottom: 1px solid #000;
+  height: 60px;
+  &_left {
+    .title {
+      position: fixed;
+      top: 10px;
+      font-size: 20px;
+      line-height: 1em;
+      padding: 10px;
+      float: left;
+    }
+  }
+  &_right{
+    float: right;
+    @include hamburgerMenu;
+  }
+  .clear{
+    clear: both;
+  }
+}
+
