@@ -98,13 +98,12 @@
 
 @mixin logs_list {
     .logs_list_item {
-        display: block;
+        margin-bottom: 100px;
         .logs_image {
             display: block;
             object-fit: cover;
             background-size: cover;
             height: 500px;
-            background-image: url("../img/top.jpeg");
             border-radius: 10px;
             z-index: 1;
             &_tag {
@@ -133,12 +132,27 @@
                 .hashtag_list {
                     display: flex;
                     &_item {
-                        color: $grai;
+                        color: $gray_02;
                         font-size: 0.8rem;
                         margin-right: 4px;
                     }
                 }
             }
+        }
+        .logs_image_01 {
+            background-image: url("../img/top.jpeg");
+        }
+        .logs_image_02 {
+            background-image: url("../img/oneyear.jpeg");
+        }
+        .logs_image_03 {
+            background-image: url("../img/oneyear.jpeg");
+        }
+        .logs_image_04 {
+            background-image: url("../img/oneyear.jpeg");
+        }
+        .logs_image_05 {
+            background-image: url("../img/oneyear.jpeg");
         }
     }
 }
