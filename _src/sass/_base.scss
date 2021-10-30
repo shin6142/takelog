@@ -4,7 +4,11 @@
 }
 
 body {
+  width: 375px;
+  margin: 0 auto;
   font-size: 15px;
+  background-color: #fffef8;
+  line-height: 1.5;
 }
 
 h1 {
@@ -24,3 +28,7 @@ li {
   list-style: none;
 }
 
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}

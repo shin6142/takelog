@@ -5,7 +5,11 @@
 }
 
 body {
+  width: 375px;
+  margin: 0 auto;
   font-size: 15px;
+  background-color: #fffef8;
+  line-height: 1.5;
 }
 
 h1 {
@@ -24,17 +28,23 @@ li {
   list-style: none;
 }
 
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
 #top .header {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #edece6;
   height: 60px;
+  z-index: 3;
 }
 
 #top .header_left .title {
   position: fixed;
-  top: 10px;
+  top: 20px;
+  left: 20px;
   font-size: 20px;
   line-height: 1em;
-  padding: 10px;
   float: left;
 }
 
@@ -165,5 +175,67 @@ li {
 
 #top .header .clear {
   clear: both;
+}
+
+#top .main {
+  margin: 20px 0;
+  height: 600px;
+  width: 100%;
+}
+
+#top .main .logs {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#top .main .logs_list_item .logs_image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  height: 500px;
+  background-image: url("../img/top.jpeg");
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#top .main .logs_list_item .logs_image_tag {
+  background-color: #fffef8;
+  height: 100%;
+  width: 300px;
+  z-index: 2;
+  position: relative;
+  top: 400px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+#top .main .logs_list_item .logs_image_tag h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: #ffd54d;
+}
+
+#top .main .logs_list_item .logs_image_tag .text {
+  font-size: 1.0rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+#top .main .logs_list_item .logs_image_tag .place {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+#top .main .logs_list_item .logs_image_tag .hashtag_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#top .main .logs_list_item .logs_image_tag .hashtag_list_item {
+  color: #666;
+  font-size: 0.8rem;
+  margin-right: 4px;
 }
 /*# sourceMappingURL=style.css.map */

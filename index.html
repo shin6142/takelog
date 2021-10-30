@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
 
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>TAKELOG</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="/js/jquery-3.5.1.min.js"></script>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TAKELOG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/jquery-3.5.1.min.js"></script>
 </head>
+
 <body id="top">
-  <header class="header">
-    <div class="header_left">
-      <h1 class="title">たけログ</h1>
-    </div>
-    <div class="header_right">
-      <div class="hamburger-menu">
-        <input type="checkbox" id="menu-btn-check">
-        <label for="menu-btn-check" class="menu-btn"><span></span></label>
-        <div class="menu-content">
-          <ul>
-              <li>
-                  <a href="#">HOME</a>
-              </li>
-              <li>
-                  <a href="#">NEWS</a>
-              </li>
-              <li>
-                  <a href="#">POST</a>
-              </li>
-          </ul>
-      </div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </header>
-  <main>
-    <section class="about">
-    </section>
-    <section class="logs">
-    </section>
-    <section class="News">
-    </section>
-    <section class="Post">
-    </section>
-    <section　class="Message">
-    </section>
-  </main>
-  <footer>
-  </footer>
+    <header class="header">
+        <div class="header_left">
+            <h1 class="title">たけログ</h1>
+        </div>
+        <div class="header_right">
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <div class="menu-content">
+                    <ul>
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">NEWS</a>
+                        </li>
+                        <li>
+                            <a href="#">POST</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <main class="main">
+        <section class="about">
+        </section>
+        <section class="logs">
+            <ul class="logs_list">
+                <li class="logs_list_item">
+                    <div class="logs_image">
+                        <div class="logs_image_tag">
+                            <h3>竹内のお気に入りPic#01</h3>
+                            <p class="text">Snow Peak カフェでの一枚、アウトドアベンチ席でコーヒーと鬼浅焼きプリン</p>
+                            <p class="place">@Snow Peak hisaya-odori Park</p>
+                            <ul class="hashtag_list">
+                                <li class="hashtag_list_item">
+                                    <p>#カフェ</p>
+                                </li>
+                                <li class="hashtag_list_item">
+                                    <p>#Snow Peak</p>
+                                </li>
+                                <li class="hashtag_list_item">
+                                    <p>#いつかの名古屋帰省</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="News">
+        </section>
+        <section class="Post">
+        </section>
+        <section　class="Message">
+            </section>
+    </main>
+    <footer>
+    </footer>
 </body>
+
 </html>
