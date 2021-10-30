@@ -10,10 +10,12 @@
             font-size: 20px;
             line-height: 1em;
             float: left;
+            z-index: 3;
         }
     }
     &_right {
         float: right;
+        z-index: 3;
         @include hamburgerMenu;
     }
     .clear {

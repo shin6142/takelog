@@ -42,37 +42,40 @@
         display: none;
     }
     .menu-content {
-        width: 100%;
+        width: $contentWidth;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 80;
-        background-color: #3584bb;
+        background-color: $yellow;
     }
     .menu-content ul {
         padding: 70px 10px 0;
     }
     .menu-content ul li {
-        border-bottom: solid 1px #ffffff;
+        border-bottom: solid 2px $black;
         list-style: none;
-    }
-    .menu-content ul li a {
-        display: block;
-        width: 100%;
-        font-size: 15px;
-        box-sizing: border-box;
-        color: #ffffff;
-        text-decoration: none;
-        padding: 9px 15px 10px 0;
-        position: relative;
+        margin-top: 10px;
+        a {
+            display: block;
+            box-sizing: border-box;
+            color: $black;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 9px 15px 10px 0;
+            position: relative;
+        }
+        .menu_icon {
+            margin: 0 6px;
+        }
     }
     .menu-content ul li a::before {
         content: "";
         width: 7px;
         height: 7px;
-        border-top: solid 2px #ffffff;
-        border-right: solid 2px #ffffff;
+        border-top: solid 2px $black;
+        border-right: solid 2px $black;
         transform: rotate(45deg);
         position: absolute;
         right: 11px;
@@ -86,7 +89,7 @@
         left: 100%;
         /*leftの値を変更してメニューを画面外へ*/
         z-index: 80;
-        background-color: #3584bb;
+        background-color: $yellow;
         transition: all 0.5s;
         /*アニメーション設定*/
     }
