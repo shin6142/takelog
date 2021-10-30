@@ -95,3 +95,50 @@
         /*メニューを画面内へ*/
     }
 }
+
+@mixin logs_list {
+    .logs_list_item {
+        display: block;
+        .logs_image {
+            display: block;
+            object-fit: cover;
+            background-size: cover;
+            height: 500px;
+            background-image: url("../img/top.jpeg");
+            border-radius: 10px;
+            z-index: 1;
+            &_tag {
+                display: block;
+                background-color: $backgroundColor;
+                width: 300px;
+                z-index: 2;
+                position: relative;
+                top: 400px;
+                border-top-right-radius: 10px;
+                padding: 10px;
+                h3 {
+                    font-size: 0.8rem;
+                    color: $yellow;
+                }
+                .text {
+                    font-size: 1.0rem;
+                    font-weight: bold;
+                    line-height: 1.6;
+                }
+                .place {
+                    font-size: 0.8rem;
+                    line-height: 1.6;
+                    color: $gray_01;
+                }
+                .hashtag_list {
+                    display: flex;
+                    &_item {
+                        color: $grai;
+                        font-size: 0.8rem;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
