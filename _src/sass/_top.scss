@@ -29,7 +29,9 @@
     section {
         width: $contentWidth;
         margin: 0 auto;
-        margin-bottom: 60px;
+        padding-bottom: $sectionBottomSpace;
+        margin-bottom: $sectionBottomSpace;
+        border-bottom: $border;
     }
     .logs {
         @include logs_list;

@@ -195,7 +195,9 @@ p {
 #top .main section {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 60px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #edece6;
 }
 
 #top .main .logs .logs_list_item {
