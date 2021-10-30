@@ -24,9 +24,15 @@
 .main {
     margin: 20px 0;
     width: 100%;
-    .logs {
-        width: 90%;
+    section {
+        width: $contentWidth;
         margin: 0 auto;
+        margin-bottom: 60px;
+    }
+    .logs {
         @include logs_list;
+    }
+    .link_button {
+        @include link_button;
     }
 }

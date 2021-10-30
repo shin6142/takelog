@@ -113,7 +113,7 @@
                 z-index: 2;
                 position: relative;
                 top: 400px;
-                border-top-right-radius: 10px;
+                border-top-right-radius: $borderRadius;
                 padding: 10px;
                 h3 {
                     font-size: 0.8rem;
@@ -146,7 +146,7 @@
             background-image: url("../img/oneyear.jpeg");
         }
         .logs_image_03 {
-            background-image: url("../img/oneyear.jpeg");
+            background-image: url("../img/tranporin.JPG");
         }
         .logs_image_04 {
             background-image: url("../img/oneyear.jpeg");
@@ -154,5 +154,24 @@
         .logs_image_05 {
             background-image: url("../img/oneyear.jpeg");
         }
+    }
+}
+
+@mixin link_button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: $contentWidth;
+    margin: 0 auto;
+    border: 1px solid $yellow;
+    border-radius: $borderRadius;
+    background-color: $yellow;
+    a {
+        color: $backgroundColor;
+    }
+    &_icon {
+        margin-right: 10px;
     }
 }
