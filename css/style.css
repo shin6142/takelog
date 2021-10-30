@@ -117,7 +117,7 @@ p {
 }
 
 #top .header_right .menu-content {
-  width: 96%;
+  width: 90%;
   height: 100%;
   position: fixed;
   top: 0;
@@ -193,7 +193,7 @@ p {
 }
 
 #top .main section {
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 60px;
 }
@@ -278,7 +278,7 @@ p {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 96%;
+  width: 90%;
   margin: 0 auto;
   border: 1px solid #ffd54d;
   border-radius: 10px;
