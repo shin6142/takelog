@@ -1,5 +1,4 @@
 .header {
-    border-bottom: $border;
     height: 60px;
     z-index: 3;
     &_left {
@@ -24,19 +23,40 @@
 }
 
 .main {
-    margin: 20px 0;
+    margin: 0;
     width: 100%;
     section {
         width: $contentWidth;
+        height: 100%;
         margin: 0 auto;
+        padding-top: 10px;
         padding-bottom: $sectionBottomSpace;
         margin-bottom: $sectionBottomSpace;
-        border-bottom: $border;
+        border-top: $border;
+        @include section_title;
     }
     .logs {
         @include logs_list;
+        @include log_list_animation;
+        .link_button_album {
+            @include link_button(680px);
+        }
     }
-    .link_button {
-        @include link_button;
+    .event {
+        position: relative;
+        top: 640px;
+        @include event_list_animation;
+        .link_button_news {
+            @include link_button(380px);
+            width: 100%;
+        }
+    }
+    .post {
+        position: relative;
+        top: 1000px;
+        .link_button_post {
+            @include link_button(200px);
+            width: 100%;
+        }
     }
 }

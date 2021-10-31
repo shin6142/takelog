@@ -5,6 +5,7 @@
 }
 
 body {
+  height: 100%;
   width: 375px;
   margin: 0 auto;
   font-size: 15px;
@@ -38,7 +39,6 @@ p {
 }
 
 #top .header {
-  border-bottom: 1px solid #edece6;
   height: 60px;
   z-index: 3;
 }
@@ -188,19 +188,35 @@ p {
 }
 
 #top .main {
-  margin: 20px 0;
+  margin: 0;
   width: 100%;
 }
 
 #top .main section {
   width: 90%;
+  height: 100%;
   margin: 0 auto;
+  padding-top: 10px;
   padding-bottom: 40px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #edece6;
+  border-top: 1px solid #edece6;
+}
+
+#top .main section .section_title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#top .main section .section_title i {
+  margin-right: 6px;
+}
+
+#top .main .logs {
+  /* ふわっとアニメーション */
 }
 
 #top .main .logs .logs_list_item {
+  width: 100%;
   margin-bottom: 100px;
 }
 
@@ -220,7 +236,7 @@ p {
   width: 300px;
   z-index: 2;
   position: relative;
-  top: 400px;
+  top: calc(500px - 100px);
   border-top-right-radius: 10px;
   padding: 10px;
 }
@@ -266,15 +282,70 @@ p {
   background-image: url("../img/tranporin.JPG");
 }
 
-#top .main .logs .logs_list_item .logs_image_04 {
-  background-image: url("../img/oneyear.jpeg");
+#top .main .logs ul {
+  position: relative;
 }
 
-#top .main .logs .logs_list_item .logs_image_05 {
-  background-image: url("../img/oneyear.jpeg");
+#top .main .logs .logs_list_item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-animation: anime 30s 0s infinite;
+  animation: anime 30s 0s infinite;
 }
 
-#top .main .link_button {
+#top .main .logs .logs_list_item:nth-of-type(2) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+#top .main .logs .logs_list_item:nth-of-type(3) {
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#top .main .logs .link_button_album {
+  position: absolute;
+  top: 680px;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
@@ -285,13 +356,177 @@ p {
   border: 1px solid #ffd54d;
   border-radius: 10px;
   background-color: #ffd54d;
-}
-
-#top .main .link_button a {
   color: #fffef8;
 }
 
-#top .main .link_button_icon {
-  margin-right: 10px;
+#top .main .logs .link_button_album .link_icon {
+  margin-right: 6px;
+}
+
+#top .main .event {
+  position: relative;
+  top: 640px;
+  /* ふわっとアニメーション */
+}
+
+#top .main .event ul {
+  position: relative;
+}
+
+#top .main .event .item {
+  opacity: 0;
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  -webkit-animation: anime 30s 0s infinite;
+  animation: anime 30s 0s infinite;
+}
+
+#top .main .event .item_tag {
+  display: block;
+  background-color: #fffef8;
+  width: 300px;
+  z-index: 2;
+  position: relative;
+  top: calc(240px - 100px);
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+#top .main .event .item_tag h3 {
+  font-size: 0.8rem;
+  color: #ffd54d;
+}
+
+#top .main .event .item_tag .text {
+  font-size: 1.0rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+#top .main .event .item_tag .place {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+#top .main .event .item_tag .hashtag_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#top .main .event .item_tag .hashtag_list_item {
+  color: #666;
+  font-size: 0.8rem;
+  margin-right: 4px;
+}
+
+#top .main .event .item:nth-of-type(1) {
+  background-image: url(../img/usj.jpeg);
+}
+
+#top .main .event .item:nth-of-type(2) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+  background-image: url(../img/twoyears.jpg);
+}
+
+#top .main .event .item:nth-of-type(3) {
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+  background-image: url(../img/christmas02.jpeg);
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    z-index: 9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#top .main .event .link_button_news {
+  position: absolute;
+  top: 380px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ffd54d;
+  border-radius: 10px;
+  background-color: #ffd54d;
+  color: #fffef8;
+  width: 100%;
+}
+
+#top .main .event .link_button_news .link_icon {
+  margin-right: 6px;
+}
+
+#top .main .post {
+  position: relative;
+  top: 1000px;
+}
+
+#top .main .post .link_button_post {
+  position: absolute;
+  top: 200px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #ffd54d;
+  border-radius: 10px;
+  background-color: #ffd54d;
+  color: #fffef8;
+  width: 100%;
+}
+
+#top .main .post .link_button_post .link_icon {
+  margin-right: 6px;
 }
 /*# sourceMappingURL=style.css.map */
