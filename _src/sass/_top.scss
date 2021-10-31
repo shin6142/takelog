@@ -24,7 +24,7 @@
 
 .main {
     margin: 0;
-    width: 100%;
+    width: 375px;
     section {
         width: $contentWidth;
         height: 100%;
@@ -36,10 +36,11 @@
         @include section_title;
     }
     .logs {
+        position: relative;
         @include logs_list;
         @include log_list_animation;
         .link_button_album {
-            @include link_button(680px);
+            @include link_button(600px);
         }
     }
     .event {
@@ -48,7 +49,7 @@
         @include event_list_animation;
         .link_button_news {
             @include link_button(380px);
-            width: 100%;
+            // width: 100%;
         }
     }
     .post {
@@ -56,7 +57,7 @@
         top: 1000px;
         .link_button_post {
             @include link_button(200px);
-            width: 100%;
+            // width: 100%;
         }
     }
 }

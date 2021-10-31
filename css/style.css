@@ -189,7 +189,7 @@ p {
 
 #top .main {
   margin: 0;
-  width: 100%;
+  width: 375px;
 }
 
 #top .main section {
@@ -212,6 +212,7 @@ p {
 }
 
 #top .main .logs {
+  position: relative;
   /* ふわっとアニメーション */
 }
 
@@ -345,13 +346,13 @@ p {
 
 #top .main .logs .link_button_album {
   position: absolute;
-  top: 680px;
+  top: 600px;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid #ffd54d;
   border-radius: 10px;
@@ -491,13 +492,12 @@ p {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid #ffd54d;
   border-radius: 10px;
   background-color: #ffd54d;
   color: #fffef8;
-  width: 100%;
 }
 
 #top .main .event .link_button_news .link_icon {
@@ -517,13 +517,12 @@ p {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid #ffd54d;
   border-radius: 10px;
   background-color: #ffd54d;
   color: #fffef8;
-  width: 100%;
 }
 
 #top .main .post .link_button_post .link_icon {
