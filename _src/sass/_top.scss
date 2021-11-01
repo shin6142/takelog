@@ -58,7 +58,6 @@
         top: 1000px;
         .link_button_post {
             @include link_button(200px);
-            // width: 100%;
         }
     }
 }
