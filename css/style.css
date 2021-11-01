@@ -371,6 +371,9 @@ p {
 
 #top .main .event_list_item {
   width: 100%;
+}
+
+#top .main .event .event_image {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -379,7 +382,7 @@ p {
   background-repeat: no-repeat;
 }
 
-#top .main .event_list_item_tag {
+#top .main .event .event_image_tag {
   display: block;
   background-color: #fffef8;
   width: 300px;
@@ -390,44 +393,44 @@ p {
   padding: 10px;
 }
 
-#top .main .event_list_item_tag h3 {
+#top .main .event .event_image_tag h3 {
   font-size: 0.8rem;
   color: #ffd54d;
 }
 
-#top .main .event_list_item_tag .text {
+#top .main .event .event_image_tag .text {
   font-size: 1.0rem;
   font-weight: bold;
   line-height: 1.6;
 }
 
-#top .main .event_list_item_tag .place {
+#top .main .event .event_image_tag .place {
   font-size: 0.8rem;
   line-height: 1.6;
   color: #444;
 }
 
-#top .main .event_list_item_tag .hashtag_list {
+#top .main .event .event_image_tag .hashtag_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#top .main .event_list_item_tag .hashtag_list_item {
+#top .main .event .event_image_tag .hashtag_list_item {
   color: #666;
   font-size: 0.8rem;
   margin-right: 4px;
 }
 
-#top .main .event_list_item:nth-of-type(1) {
+#top .main .event .event_image:nth-of-type(1) {
   background-image: url(../img/usj.jpeg);
 }
 
-#top .main .event_list_item:nth-of-type(2) {
+#top .main .event .event_image:nth-of-type(2) {
   background-image: url(../img/twoyears.jpg);
 }
 
-#top .main .event_list_item:nth-of-type(3) {
+#top .main .event .event_image:nth-of-type(3) {
   background-image: url(../img/christmas02.jpeg);
 }
 
