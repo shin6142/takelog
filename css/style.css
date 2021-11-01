@@ -218,7 +218,6 @@ p {
 
 #top .main .logs .logs_list_item {
   width: 100%;
-  margin-bottom: 100px;
 }
 
 #top .main .logs .logs_list_item .logs_image {
@@ -283,11 +282,11 @@ p {
   background-image: url("../img/tranporin.JPG");
 }
 
-#top .main .logs ul {
+#top .main .logs_list {
   position: relative;
 }
 
-#top .main .logs .logs_list_item {
+#top .main .logs_list_item {
   position: absolute;
   left: 0;
   top: 0;
@@ -296,12 +295,12 @@ p {
   animation: anime 30s 0s infinite;
 }
 
-#top .main .logs .logs_list_item:nth-of-type(2) {
+#top .main .logs_list_item:nth-of-type(2) {
   -webkit-animation-delay: 10s;
   animation-delay: 10s;
 }
 
-#top .main .logs .logs_list_item:nth-of-type(3) {
+#top .main .logs_list_item:nth-of-type(3) {
   -webkit-animation-delay: 20s;
   animation-delay: 20s;
 }
@@ -370,27 +369,17 @@ p {
   /* ふわっとアニメーション */
 }
 
-#top .main .event ul {
-  position: relative;
-}
-
-#top .main .event .item {
-  opacity: 0;
+#top .main .event_list_item {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
   background-size: cover;
   border-radius: 10px;
   background-repeat: no-repeat;
-  -webkit-animation: anime 30s 0s infinite;
-  animation: anime 30s 0s infinite;
 }
 
-#top .main .event .item_tag {
+#top .main .event_list_item_tag {
   display: block;
   background-color: #fffef8;
   width: 300px;
@@ -401,49 +390,68 @@ p {
   padding: 10px;
 }
 
-#top .main .event .item_tag h3 {
+#top .main .event_list_item_tag h3 {
   font-size: 0.8rem;
   color: #ffd54d;
 }
 
-#top .main .event .item_tag .text {
+#top .main .event_list_item_tag .text {
   font-size: 1.0rem;
   font-weight: bold;
   line-height: 1.6;
 }
 
-#top .main .event .item_tag .place {
+#top .main .event_list_item_tag .place {
   font-size: 0.8rem;
   line-height: 1.6;
   color: #444;
 }
 
-#top .main .event .item_tag .hashtag_list {
+#top .main .event_list_item_tag .hashtag_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#top .main .event .item_tag .hashtag_list_item {
+#top .main .event_list_item_tag .hashtag_list_item {
   color: #666;
   font-size: 0.8rem;
   margin-right: 4px;
 }
 
-#top .main .event .item:nth-of-type(1) {
+#top .main .event_list_item:nth-of-type(1) {
   background-image: url(../img/usj.jpeg);
 }
 
-#top .main .event .item:nth-of-type(2) {
-  -webkit-animation-delay: 10s;
-  animation-delay: 10s;
+#top .main .event_list_item:nth-of-type(2) {
   background-image: url(../img/twoyears.jpg);
 }
 
-#top .main .event .item:nth-of-type(3) {
+#top .main .event_list_item:nth-of-type(3) {
+  background-image: url(../img/christmas02.jpeg);
+}
+
+#top .main .event_list {
+  position: relative;
+}
+
+#top .main .event_list_item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  -webkit-animation: anime 30s 0s infinite;
+  animation: anime 30s 0s infinite;
+}
+
+#top .main .event_list_item:nth-of-type(2) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+#top .main .event_list_item:nth-of-type(3) {
   -webkit-animation-delay: 20s;
   animation-delay: 20s;
-  background-image: url(../img/christmas02.jpeg);
 }
 
 @keyframes anime {

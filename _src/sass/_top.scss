@@ -38,7 +38,7 @@
     .logs {
         position: relative;
         @include logs_list;
-        @include log_list_animation;
+        @include list_animation;
         .link_button_album {
             @include link_button(600px);
         }
@@ -46,7 +46,8 @@
     .event {
         position: relative;
         top: 640px;
-        @include event_list_animation;
+        @include event_list;
+        @include list_animation;
         .link_button_news {
             @include link_button(380px);
             // width: 100%;

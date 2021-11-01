@@ -1,0 +1,58 @@
+@mixin list_animation {
+    &_list {
+        position: relative;
+    }
+    &_list_item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        -webkit-animation: anime 30s 0s infinite;
+        animation: anime 30s 0s infinite;
+    }
+    &_list_item:nth-of-type(2) {
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+    }
+    &_list_item:nth-of-type(3) {
+        -webkit-animation-delay: 20s;
+        animation-delay: 20s;
+    }
+    /* ふわっとアニメーション */
+    @keyframes anime {
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        35% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+            z-index: 9;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes anime {
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        35% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+            z-index: 9;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
