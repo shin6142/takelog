@@ -113,7 +113,7 @@
     display: block;
     background-color: $backgroundColor;
     width: 300px;
-    z-index: 2;
+    z-index: 10;
     position: relative;
     top: calc(#{$parentHight} - 100px);
     border-top-right-radius: $borderRadius;
@@ -143,47 +143,26 @@
 }
 
 @mixin logs_list {
-    .logs_list_item {
+    &_list_item {
         width: 100%;
-        .logs_image {
-            display: block;
-            object-fit: cover;
-            background-size: cover;
-            height: 500px;
-            border-radius: $borderRadius;
-            z-index: 1;
-            &_tag {
-                @include _tag("500px");
-            }
-        }
-        .logs_image_01 {
-            background-image: url("../img/top.jpeg");
-        }
-        .logs_image_02 {
-            background-image: url("../img/oneyear.jpeg");
-        }
-        .logs_image_03 {
-            background-image: url("../img/tranporin.JPG");
+    }
+    &_image {
+        height: 500px;
+        object-fit: cover;
+        background-size: cover;
+        border-radius: $borderRadius;
+        &_tag {
+            @include _tag("500px");
         }
     }
-}
-
-@mixin link_button($buttonPositionTop) {
-    position: absolute;
-    top: $buttonPositionTop;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-    margin: 0 auto;
-    border: 1px solid $yellow;
-    border-radius: $borderRadius;
-    background-color: $yellow;
-    color: $backgroundColor;
-    .link_icon {
-        margin-right: 6px;
+    &_image_01 {
+        background-image: url("../img/top.jpeg");
+    }
+    &_image_02 {
+        background-image: url("../img/oneyear.jpeg");
+    }
+    &_image_03 {
+        background-image: url("../img/tranporin.JPG");
     }
 }
 
@@ -191,23 +170,22 @@
     &_list_item {
         width: 100%;
     }
-    .event_image {
+    &_image {
         height: 200px;
         object-fit: cover;
         background-size: cover;
         border-radius: $borderRadius;
-        background-repeat: no-repeat;
         &_tag {
             @include _tag("240px");
         }
     }
-    .event_image:nth-of-type(1) {
-        background-image: url(../img/usj.jpeg);
+    &_image_01 {
+        background-image: url("../img/usj.jpeg");
     }
-    .event_image:nth-of-type(2) {
-        background-image: url(../img/twoyears.jpg);
+    &_image_02 {
+        background-image: url("../img/twoyears.jpg");
     }
-    .event_image:nth-of-type(3) {
-        background-image: url(../img/christmas02.jpeg);
+    &_image_03 {
+        background-image: url("../img/christmas02.jpeg");
     }
 }
