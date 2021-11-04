@@ -1,3 +1,14 @@
+@mixin section_title {
+    .section_title {
+        i {
+            margin-right: 6px;
+        }
+        text-align: center;
+        margin: 16px 0;
+        padding-bottom: 10px;
+    }
+}
+
 @mixin link_button($buttonPositionTop) {
     position: absolute;
     top: $buttonPositionTop;
@@ -14,5 +25,38 @@
     color: $backgroundColor;
     .link_icon {
         margin-right: 6px;
+    }
+}
+
+@mixin _tag($parentHight) {
+    display: block;
+    background-color: $backgroundColor;
+    width: 300px;
+    z-index: 10;
+    position: relative;
+    top: calc(#{$parentHight} - 100px);
+    border-top-right-radius: $borderRadius;
+    padding: 10px;
+    h3 {
+        font-size: 0.8rem;
+        color: $yellow;
+    }
+    .text {
+        font-size: 1.0rem;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+    .place {
+        font-size: 0.8rem;
+        line-height: 1.6;
+        color: $gray_01;
+    }
+    .hashtag_list {
+        display: flex;
+        &_item {
+            color: $gray_02;
+            font-size: 0.8rem;
+            margin-right: 4px;
+        }
     }
 }

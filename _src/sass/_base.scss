@@ -36,3 +36,46 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0;
 }
+
+.header {
+    height: 60px;
+    z-index: 3;
+    &_left {
+        .title {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            line-height: 1em;
+            float: left;
+            z-index: 3;
+        }
+    }
+    &_right {
+        float: right;
+        z-index: 3;
+        @include hamburgerMenu;
+    }
+    .clear {
+        clear: both;
+    }
+}
+
+.footer {
+    position: relative;
+    top: 1060px;
+    text-align: center;
+    &_image {
+        width: 30%;
+        position: relative;
+        top: 100px;
+        filter: drop-shadow(0 0 0.3rem rgb(0, 0, 0));
+    }
+    &_text {
+        color: $gray_01;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: relative;
+        top: 100px;
+        padding-bottom: 10px;
+    }
+}
