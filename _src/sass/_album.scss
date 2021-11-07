@@ -1,0 +1,37 @@
+.main {
+    margin: 0;
+    width: 375px;
+    section {
+        width: $contentWidth;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: $sectionBottomSpace;
+        margin-bottom: $sectionBottomSpace;
+        border-top: $border;
+        @include section_title;
+    }
+    .logs {
+        position: relative;
+        @include logs_list;
+        &_list_item {
+            margin-bottom: 100px;
+        }
+    }
+    .link_button_top {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid $yellow;
+        border-radius: $borderRadius;
+        background-color: $yellow;
+        color: $backgroundColor;
+        .link_icon {
+            margin-right: 6px;
+        }
+    }
+}

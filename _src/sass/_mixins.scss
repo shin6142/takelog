@@ -1,149 +1,170 @@
-@mixin hamburgerMenu {
-    z-index: 90;
-    .menu-btn {
-        position: fixed;
-        right: 10px;
-        display: flex;
-        height: 60px;
-        width: 60px;
-        justify-content: center;
-        align-items: center;
-        z-index: 90;
-    }
-    .menu-btn span,
-    .menu-btn span:before,
-    .menu-btn span:after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 25px;
-        border-radius: 3px;
-        background-color: #000;
-        position: absolute;
-    }
-    .menu-btn span:before {
-        bottom: 8px;
-    }
-    .menu-btn span:after {
-        top: 8px;
-    }
-    #menu-btn-check:checked~.menu-btn span {
-        background-color: rgba(255, 255, 255, 0);
-        /*メニューオープン時は真ん中の線を透明にする*/
-    }
-    #menu-btn-check:checked~.menu-btn span::before {
-        bottom: 0;
-        transform: rotate(45deg);
-    }
-    #menu-btn-check:checked~.menu-btn span::after {
-        top: 0;
-        transform: rotate(-45deg);
-    }
-    #menu-btn-check {
-        display: none;
-    }
-    .menu-content {
-        width: $contentWidth;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 80;
-        background-color: $yellow;
-    }
-    .menu-content ul {
-        padding: 70px 10px 0;
-    }
-    .menu-content ul li {
-        border-bottom: solid 2px $black;
-        list-style: none;
-        margin-top: 10px;
-        a {
-            display: block;
-            box-sizing: border-box;
-            color: $black;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 9px 15px 10px 0;
-            position: relative;
+        @mixin hamburgerMenu {
+            z-index: 90;
+            .menu-btn {
+                position: fixed;
+                right: 10px;
+                display: flex;
+                height: 60px;
+                width: 60px;
+                justify-content: center;
+                align-items: center;
+                z-index: 90;
+            }
+            .menu-btn span,
+            .menu-btn span:before,
+            .menu-btn span:after {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 25px;
+                border-radius: 3px;
+                background-color: #000;
+                position: absolute;
+            }
+            .menu-btn span:before {
+                bottom: 8px;
+            }
+            .menu-btn span:after {
+                top: 8px;
+            }
+            #menu-btn-check:checked~.menu-btn span {
+                background-color: rgba(255, 255, 255, 0);
+                /*メニューオープン時は真ん中の線を透明にする*/
+            }
+            #menu-btn-check:checked~.menu-btn span::before {
+                bottom: 0;
+                transform: rotate(45deg);
+            }
+            #menu-btn-check:checked~.menu-btn span::after {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+            #menu-btn-check {
+                display: none;
+            }
+            .menu-content {
+                width: $contentWidth;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 80;
+                background-color: $yellow;
+            }
+            .menu-content ul {
+                padding: 70px 10px 0;
+            }
+            .menu-content ul li {
+                border-bottom: solid 2px $black;
+                list-style: none;
+                margin-top: 10px;
+                a {
+                    display: block;
+                    box-sizing: border-box;
+                    color: $black;
+                    font-weight: bold;
+                    text-decoration: none;
+                    padding: 9px 15px 10px 0;
+                    position: relative;
+                }
+                .menu_icon {
+                    margin: 0 6px;
+                }
+            }
+            .menu-content ul li a::before {
+                content: "";
+                width: 7px;
+                height: 7px;
+                border-top: solid 2px $black;
+                border-right: solid 2px $black;
+                transform: rotate(45deg);
+                position: absolute;
+                right: 11px;
+                top: 16px;
+            }
+            .menu-content {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 100%;
+                /*leftの値を変更してメニューを画面外へ*/
+                z-index: 80;
+                background-color: $yellow;
+                transition: all 0.5s;
+                /*アニメーション設定*/
+            }
+            #menu-btn-check:checked~.menu-content {
+                left: 0;
+                /*メニューを画面内へ*/
+            }
         }
-        .menu_icon {
-            margin: 0 6px;
+        
+        @mixin logs_list {
+            &_list_item {
+                width: 100%;
+            }
+            &_image {
+                height: 500px;
+                object-fit: cover;
+                background-size: cover;
+                border-radius: $borderRadius;
+                &_tag {
+                    @include _tag("500px");
+                }
+            }
+            &_image_01 {
+                background-image: url("../img/top.jpeg");
+            }
+            &_image_02 {
+                background-image: url("../img/oneyear.jpeg");
+            }
+            &_image_03 {
+                background-image: url("../img/tranporin.JPG");
+            }
+            &_image_04 {
+                background-image: url("../img/azisai.JPG");
+            }
+            &_image_05 {
+                background-image: url("../img/kourankei.jpeg");
+            }
+            &_image_06 {
+                background-image: url("../img/kimono.jpeg");
+            }
+            &_image_07 {
+                background-image: url("../img/sakushima.jpeg");
+            }
+            &_image_08 {
+                background-image: url("../img/syounairyokuti.jpeg");
+            }
+            &_image_09 {
+                background-image: url("../img/shibahu.jpeg");
+            }
+            &_image_10 {
+                background-image: url("../img/record.PNG");
+            }
         }
-    }
-    .menu-content ul li a::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-top: solid 2px $black;
-        border-right: solid 2px $black;
-        transform: rotate(45deg);
-        position: absolute;
-        right: 11px;
-        top: 16px;
-    }
-    .menu-content {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 100%;
-        /*leftの値を変更してメニューを画面外へ*/
-        z-index: 80;
-        background-color: $yellow;
-        transition: all 0.5s;
-        /*アニメーション設定*/
-    }
-    #menu-btn-check:checked~.menu-content {
-        left: 0;
-        /*メニューを画面内へ*/
-    }
-}
-
-@mixin logs_list {
-    &_list_item {
-        width: 100%;
-    }
-    &_image {
-        height: 500px;
-        object-fit: cover;
-        background-size: cover;
-        border-radius: $borderRadius;
-        &_tag {
-            @include _tag("500px");
+        
+        @mixin event_list {
+            &_list_item {
+                width: 100%;
+            }
+            &_image {
+                height: 200px;
+                object-fit: cover;
+                background-size: cover;
+                border-radius: $borderRadius;
+                &_tag {
+                    @include _tag("240px");
+                }
+            }
+            &_image_01 {
+                background-image: url("../img/usj.jpeg");
+            }
+            &_image_02 {
+                background-image: url("../img/twoyears.jpg");
+            }
+            &_image_03 {
+                background-image: url("../img/christmas02.jpeg");
+            }
         }
-    }
-    &_image_01 {
-        background-image: url("../img/top.jpeg");
-    }
-    &_image_02 {
-        background-image: url("../img/oneyear.jpeg");
-    }
-    &_image_03 {
-        background-image: url("../img/tranporin.JPG");
-    }
-}
-
-@mixin event_list {
-    &_list_item {
-        width: 100%;
-    }
-    &_image {
-        height: 200px;
-        object-fit: cover;
-        background-size: cover;
-        border-radius: $borderRadius;
-        &_tag {
-            @include _tag("240px");
-        }
-    }
-    &_image_01 {
-        background-image: url("../img/usj.jpeg");
-    }
-    &_image_02 {
-        background-image: url("../img/twoyears.jpg");
-    }
-    &_image_03 {
-        background-image: url("../img/christmas02.jpeg");
-    }
-}

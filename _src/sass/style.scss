@@ -6,3 +6,15 @@
 #top {
     @import "top";
 }
+
+#album {
+    @import "album";
+    .logs {
+        position: relative;
+        @include logs_list;
+        // @include list_animation;
+        .link_button_album {
+            @include link_button(600px);
+        }
+    }
+}
