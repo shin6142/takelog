@@ -567,6 +567,14 @@ p {
   background-image: url("../img/christmas02.jpeg");
 }
 
+#top .main .event_image_04 {
+  background-image: url("../img/haginaka.JPG");
+}
+
+#top .main .event_image_05 {
+  background-image: url("../img/naiteishiki.JPG");
+}
+
 #top .main .event_list {
   position: relative;
 }
@@ -738,10 +746,6 @@ p {
   margin-right: 6px;
 }
 
-#album .main .logs {
-  position: relative;
-}
-
 #album .main .logs_list_item {
   width: 100%;
 }
@@ -856,111 +860,114 @@ p {
   margin-right: 6px;
 }
 
-#album .logs {
-  position: relative;
+#event .main {
+  margin: 0;
+  width: 375px;
 }
 
-#album .logs_list_item {
+#event .main section {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-top: 1px solid #edece6;
+}
+
+#event .main section .section_title {
+  text-align: center;
+  margin: 16px 0;
+  padding-bottom: 10px;
+}
+
+#event .main section .section_title i {
+  margin-right: 6px;
+}
+
+#event .main .event_list_item {
   width: 100%;
 }
 
-#album .logs_image {
-  height: 500px;
+#event .main .event_image {
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
   border-radius: 10px;
 }
 
-#album .logs_image_tag {
+#event .main .event_image_tag {
   display: block;
   background-color: #fffef8;
   width: 300px;
   z-index: 10;
   position: relative;
-  top: calc(500px - 100px);
+  top: calc(240px - 100px);
   border-top-right-radius: 10px;
   padding: 10px;
 }
 
-#album .logs_image_tag h3 {
+#event .main .event_image_tag h3 {
   font-size: 0.8rem;
   color: #ffd54d;
 }
 
-#album .logs_image_tag .text {
+#event .main .event_image_tag .text {
   font-size: 1.0rem;
   font-weight: bold;
   line-height: 1.6;
 }
 
-#album .logs_image_tag .place {
+#event .main .event_image_tag .place {
   font-size: 0.8rem;
   line-height: 1.6;
   color: #444;
 }
 
-#album .logs_image_tag .hashtag_list {
+#event .main .event_image_tag .hashtag_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#album .logs_image_tag .hashtag_list_item {
+#event .main .event_image_tag .hashtag_list_item {
   color: #666;
   font-size: 0.8rem;
   margin-right: 4px;
 }
 
-#album .logs_image_01 {
-  background-image: url("../img/top.jpeg");
+#event .main .event_image_01 {
+  background-image: url("../img/usj.jpeg");
 }
 
-#album .logs_image_02 {
-  background-image: url("../img/oneyear.jpeg");
+#event .main .event_image_02 {
+  background-image: url("../img/twoyears.jpg");
 }
 
-#album .logs_image_03 {
-  background-image: url("../img/tranporin.JPG");
+#event .main .event_image_03 {
+  background-image: url("../img/christmas02.jpeg");
 }
 
-#album .logs_image_04 {
-  background-image: url("../img/azisai.JPG");
+#event .main .event_image_04 {
+  background-image: url("../img/haginaka.JPG");
 }
 
-#album .logs_image_05 {
-  background-image: url("../img/kourankei.jpeg");
+#event .main .event_image_05 {
+  background-image: url("../img/naiteishiki.JPG");
 }
 
-#album .logs_image_06 {
-  background-image: url("../img/kimono.jpeg");
+#event .main .event_list_item {
+  margin-bottom: 120px;
 }
 
-#album .logs_image_07 {
-  background-image: url("../img/sakushima.jpeg");
-}
-
-#album .logs_image_08 {
-  background-image: url("../img/syounairyokuti.jpeg");
-}
-
-#album .logs_image_09 {
-  background-image: url("../img/shibahu.jpeg");
-}
-
-#album .logs_image_10 {
-  background-image: url("../img/record.PNG");
-}
-
-#album .logs .link_button_album {
-  position: absolute;
-  top: 600px;
+#event .main .link_button_top {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   border: 1px solid #ffd54d;
   border-radius: 10px;
@@ -968,7 +975,7 @@ p {
   color: #fffef8;
 }
 
-#album .logs .link_button_album .link_icon {
+#event .main .link_button_top .link_icon {
   margin-right: 6px;
 }
 /*# sourceMappingURL=style.css.map */

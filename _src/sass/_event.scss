@@ -11,11 +11,10 @@
         border-top: $border;
         @include section_title;
     }
-    .logs {
-        // position: relative;
-        @include logs_list;
+    .event {
+        @include event_list;
         &_list_item {
-            margin-bottom: 100px;
+            margin-bottom: 120px;
         }
     }
     .link_button_top {
