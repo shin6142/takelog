@@ -7,8 +7,8 @@
         left: 0;
         top: 0;
         opacity: 0;
-        -webkit-animation: anime 30s 0s infinite;
-        animation: anime 30s 0s infinite;
+        -webkit-animation: anime 30s 2s infinite;
+        animation: anime 30s 2s infinite;
     }
     &_list_item:nth-of-type(2) {
         -webkit-animation-delay: 10s;
@@ -53,6 +53,58 @@
         }
         100% {
             opacity: 0;
+        }
+    }
+}
+
+@mixin loading_animation {
+    HTML CSSResult Skip Results Iframe EDIT ON .opening {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    .opening::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #111;
+        animation: opening 2.1s forwards;
+    }
+    @keyframes opening {
+        99% {
+            opacity: 1;
+            z-index: 1;
+        }
+        100% {
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    .opening::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 10px;
+        background-color: #d3ac07;
+        animation: openingline 2s forwards;
+    }
+    @keyframes openingline {
+        99% {
+            opacity: 1;
+            z-index: 1;
+        }
+        100% {
+            width: 100%;
+            opacity: 0;
+            z-index: -1;
         }
     }
 }

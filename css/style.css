@@ -15,6 +15,91 @@ body {
   color: #000;
 }
 
+body HTML CSSResult Skip Results Iframe EDIT ON .opening {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+body .opening::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  -webkit-animation: opening 2.1s forwards;
+          animation: opening 2.1s forwards;
+}
+
+@-webkit-keyframes opening {
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes opening {
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+body .opening::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: #d3ac07;
+  -webkit-animation: openingline 2s forwards;
+          animation: openingline 2s forwards;
+}
+
+@-webkit-keyframes openingline {
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes openingline {
+  99% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
 h1 {
   margin: 0;
 }
@@ -56,6 +141,7 @@ p {
 .header_right {
   float: right;
   z-index: 3;
+  z-index: 90;
 }
 
 .header_right .menu-btn {
@@ -312,8 +398,8 @@ p {
   left: 0;
   top: 0;
   opacity: 0;
-  -webkit-animation: anime 30s 0s infinite;
-  animation: anime 30s 0s infinite;
+  -webkit-animation: anime 30s 2s infinite;
+  animation: anime 30s 2s infinite;
 }
 
 #top .main .logs_list_item:nth-of-type(2) {
@@ -463,8 +549,8 @@ p {
   left: 0;
   top: 0;
   opacity: 0;
-  -webkit-animation: anime 30s 0s infinite;
-  animation: anime 30s 0s infinite;
+  -webkit-animation: anime 30s 2s infinite;
+  animation: anime 30s 2s infinite;
 }
 
 #top .main .event_list_item:nth-of-type(2) {
